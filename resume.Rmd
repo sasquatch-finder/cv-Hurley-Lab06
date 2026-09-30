@@ -1,6 +1,6 @@
 ---
-title: Nick Strayer's Resume"
-author: Nick Strayer
+title: Owen Hurley's Resume"
+author: Owen Hurley
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -34,7 +34,8 @@ position_data <- read_csv('positions.csv') %>%
   mutate(
     # Build some custom sections by collapsing others
     section = case_when(
-      section %in% c('research_positions', 'industry_positions') ~ 'positions', 
+      section %in% c('research_positions', 'industry_positions','academic_work
+') ~ 'positions', 
       section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
       TRUE ~ section
     )
@@ -47,18 +48,15 @@ Aside
 ================================================================================
 
 
-![logo](beta_dist.png){width=100%}
+![logo](IMG_1802.jpg){width=100%}
 
 Contact {#contact}
 --------------------------------------------------------------------------------
 
 
 
-- <i class="fa fa-envelope"></i> nick.strayer@gmail.com
-- <i class="fa fa-twitter"></i> NicholasStrayer
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
-- <i class="fa fa-phone"></i> (734) 645-0110
+- <i class="fa fa-envelope"></i> ohhurley@asu.edu
+- <i class="fa fa-github"></i> github.com/sasquatch-finder
 
 
 
@@ -69,34 +67,31 @@ Language Skills {#skills}
 ```{r}
 skills <- tribble(
   ~skill,               ~level,
-  "R",                  5,
-  "Javascript (d3.js)", 4.5,
-  "Python",             4,
-  "Bash",               3.5,
-  "SQL",                3,
-  "C++",                3,
-  "AWK",                3
+  "R",                  3.5,
+  "Python",             1,
+  "SQL",                1.5,
+  "English",            4.8, 
 )
 build_skill_bars(skills)
 ```
 
+Fun Facts {#funfacts}
+--------------------------------------------------------------------------------
+* **Coffee in the veins:** Converted over 600 cups of coffee into (mostly) working code.
+
+* **5k fan:** Has finished at least one 5k run.
+
+* **Super Commuter:** Spends an average of 8 hours commuting each week (a whole workday!)
 
 
-Open Source Contributions {#open-source}
+
+Other Interesting/Open Source Projects {#IOSProjs}
 --------------------------------------------------------------------------------
 
-All projects available at `github.com/nstrayer/<name>`
+All Projects available at https://github.com/sasquatch-finder/
 
+- GitHub Page: https://github.com/sasquatch-finder/sasquatch-finder.github.io.git
 
-- `shinysense`: R package to use sensor data in Shiny apps
-- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
-- `slid3r`: D3 add-on for fully svg slider inputs
-
-
-More info {#more-info}
---------------------------------------------------------------------------------
-
-See full CV at nickstrayer.me/cv for more complete list of positions and publications.
 
 
 Disclaimer {#disclaimer}
@@ -104,23 +99,18 @@ Disclaimer {#disclaimer}
 
 Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
 
-Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+Source code: [https://github.com/sasquatch-finder/cv-Hurley-Lab06](https://github.com/sasquatch-finder/cv-Hurley-Lab06).
 
 Last updated on `r Sys.Date()`.
-
-
-
 
 Main
 ================================================================================
 
-Nick Strayer {#title}
+Owen Hurley {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
-
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
+intro_text <- "I am a blossoming Data Analyst working to help my coding and math skills catch up with the work I am expected to produce. Follow along as I live up to my job expectations! 
 "
 
 
@@ -145,12 +135,13 @@ Selected Positions {data-icon=suitcase}
 position_data %>% print_section('positions')
 ```
 
-Selected Writing {data-icon=newspaper}
+
+Coding Projects {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-position_data %>% print_section('writings')
+position_data %>% print_section('academic_work')
 ```
 
 
